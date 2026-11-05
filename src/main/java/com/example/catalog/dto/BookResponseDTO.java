@@ -2,10 +2,10 @@ package com.example.catalog.dto;
 
 import com.example.catalog.domain.Book;
 
-public record BookResponse(Long id, String isbn, String title, String author, int year) {
+public record BookResponseDTO(Long id, String isbn, String title, String author, int year) {
 
-    public static BookResponse fromDomain(Book book) {
-        return new BookResponse(
+    public static BookResponseDTO fromDomain(Book book) {
+        return new BookResponseDTO(
                 book.getId(),
                 book.getIsbn(),
                 book.getTitle(),
